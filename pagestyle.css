@@ -1,0 +1,114 @@
+/*Overall style setup*/
+* {
+    color: rgb(0, 81, 61);
+    background-color: rgb(61, 164, 138);
+}
+
+@font-face {
+    font-family: funFont;
+    src: url("Fredoka-VariableFont_wdth,wght.ttf")
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template: 
+    'header header header header header' 10%
+    'col1 col2 col2 col2 col3' 80%
+    'nav nav nav nav nav' 10%
+}
+
+/*text rules*/
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+p {
+    text-align: left;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'funFont';
+    text-align: center;
+    font-size: 35px;
+    color: rgb(122, 0, 92);
+}
+
+/*specific container rules*/
+header {
+    font-family: 'funFont';
+    font-weight: 600;
+    font-size: 50px;
+    color: rgb(186, 69, 157);
+    background-color: rgb(0, 81, 61);
+    grid-area: header;
+    margin: 5px;
+    text-align: center;
+}
+
+.column1 {
+    background-color: rgb(61, 164, 138);
+    grid-area: col1;
+    margin: 5px;
+}
+
+.column2 {
+    background-color: rgb(61, 164, 138);
+    grid-area: col2;
+    margin: 5px;
+}
+
+.column3 {
+    background-color: rgb(61, 164, 138);
+    grid-area: col3;
+    margin: 5px;
+}
+
+nav {
+    background-color: rgb(61, 164, 138);
+    grid-area: nav;
+    text-align: center;
+}
+
+/*image positioning*/
+img {
+    float: left;
+    width: 30%;
+    height: auto;
+    margin: 10px;
+}
+pic {
+    grid-area: pic;
+    object-fit: contain;
+}
+
+/*tablet size grid*/
+@media screen and (max-width:900px) {
+    .container {
+        height: 100vh;
+        display: grid;
+        grid-template: 
+        'header header header' 10%
+        'col1 col2 col2' 45%
+        'col3 col2 col2' 45%
+        'nav nav nav' 5%
+    }
+}
+
+/*phone size grid*/
+@media screen and (max-width:600px) {
+    .container {
+        min-height: 100%;
+        display: grid;
+        grid-template: 
+        'header header header' 10%
+        'col2 col2 col2' 85%
+        'col1 col1 col1' 40%
+        'col3 col3 col3' 40%
+        'nav nav nav' 10%
+    } 
+}
